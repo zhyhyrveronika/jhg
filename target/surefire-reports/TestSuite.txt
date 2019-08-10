@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 1, Errors: 0, Skipped: 15, Time elapsed: 29.661 s <<< FAILURE! - in TestSuite
+AddProduct(tests.CartTest)  Time elapsed: 28.274 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+element click intercepted: Element <i ng-show="isShowAddBtn(dish.availableToOrder)" class="plus" data-ng-click="add(dish, $event)"></i> is not clickable at point (928, 520). Other element would receive the click: <div class="ngdialog-overlay"></div>
+  (Session info: chrome=76.0.3809.100)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ZHYHYR', ip: '192.168.2.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}), userDataDir=C:\Users\1C98~1\AppData\Local\Temp\scoped_dir6624_12130}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:51621}, acceptInsecureCerts=false, browserVersion=76.0.3809.100, browserName=chrome, javascriptEnabled=true, platformName=windows nt, setWindowRect=true}]
+Session ID: 67c6646f9e7ea3d2a4156801a262c041
+	at tests.CartTest.AddProduct(CartTest.java:27)
+

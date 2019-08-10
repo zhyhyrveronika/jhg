@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="9" failed="0" total="9" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="19896" started-at="2019-08-10T07:33:49Z" finished-at="2019-08-10T07:34:09Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="19896" started-at="2019-08-10T07:33:49Z" finished-at="2019-08-10T07:34:09Z">
+      <class name="tests.SearchFunctionTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="init" is-config="true" duration-ms="6860" started-at="2019-08-10T10:33:42Z" finished-at="2019-08-10T10:33:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="SKIP" signature="appSetup()[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="appSetup" is-config="true" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appSetup -->
+        <test-method status="SKIP" signature="SearchTestExistentInfo(java.lang.String)[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="SearchTestExistentInfo" duration-ms="1" started-at="2019-08-10T10:34:09Z" data-provider="dataProvider" finished-at="2019-08-10T10:34:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GEO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTestExistentInfo -->
+        <test-method status="SKIP" signature="SearchTestExistentInfo(java.lang.String)[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="SearchTestExistentInfo" duration-ms="0" started-at="2019-08-10T10:34:09Z" data-provider="dataProvider" finished-at="2019-08-10T10:34:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[georgia]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTestExistentInfo -->
+        <test-method status="SKIP" signature="SearchTestExistentInfo(java.lang.String)[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="SearchTestExistentInfo" duration-ms="0" started-at="2019-08-10T10:34:09Z" data-provider="dataProvider" finished-at="2019-08-10T10:34:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Georgia]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTestExistentInfo -->
+        <test-method status="SKIP" signature="SearchTestNonexistentInfo(java.lang.String)[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="SearchTestNonexistentInfo" duration-ms="1" started-at="2019-08-10T10:34:09Z" data-provider="dataProvider" finished-at="2019-08-10T10:34:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Georgya]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTestNonexistentInfo -->
+        <test-method status="SKIP" signature="SearchTestNonexistentInfo(java.lang.String)[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="SearchTestNonexistentInfo" duration-ms="0" started-at="2019-08-10T10:34:09Z" data-provider="dataProvider" finished-at="2019-08-10T10:34:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[random info]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTestNonexistentInfo -->
+      </class> <!-- tests.SearchFunctionTest -->
+      <class name="tests.CartTest">
+        <test-method status="FAIL" signature="AddProduct()[pri:0, instance:tests.CartTest@5315b42e]" name="AddProduct" is-config="true" duration-ms="0" started-at="2019-08-10T10:33:49Z" finished-at="2019-08-10T10:33:49Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[element click intercepted: Element <i ng-show="isShowAddBtn(dish.availableToOrder)" class="plus" data-ng-click="add(dish, $event)"></i> is not clickable at point (928, 520). Other element would receive the click: <div class="ngdialog-overlay"></div>
+  (Session info: chrome=76.0.3809.100)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ZHYHYR', ip: '192.168.2.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}), userDataDir=C:\Users\1C98~1\AppData\Local\Temp\scoped_dir6624_12130}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:51621}, acceptInsecureCerts=false, browserVersion=76.0.3809.100, browserName=chrome, javascriptEnabled=true, platformName=windows nt, setWindowRect=true}]
+Session ID: 67c6646f9e7ea3d2a4156801a262c041]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <i ng-show="isShowAddBtn(dish.availableToOrder)" class="plus" data-ng-click="add(dish, $event)"></i> is not clickable at point (928, 520). Other element would receive the click: <div class="ngdialog-overlay"></div>
+  (Session info: chrome=76.0.3809.100)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ZHYHYR', ip: '192.168.2.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.140 (2d9f97485c7b07dc18a74666574f19176731995c-refs/branch-heads/3770@{#1155}), userDataDir=C:\Users\1C98~1\AppData\Local\Temp\scoped_dir6624_12130}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:51621}, acceptInsecureCerts=false, browserVersion=76.0.3809.100, browserName=chrome, javascriptEnabled=true, platformName=windows nt, setWindowRect=true}]
+Session ID: 67c6646f9e7ea3d2a4156801a262c041
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at tests.CartTest.AddProduct(CartTest.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddProduct -->
+        <test-method status="SKIP" signature="CreateOrder()[pri:0, instance:tests.CheckoutTest@62043840]" name="CreateOrder" is-config="true" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateOrder -->
+        <test-method status="SKIP" signature="profileSetup()[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="profileSetup" is-config="true" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- profileSetup -->
+        <test-method status="SKIP" signature="cancellDelete()[pri:0, instance:tests.CartTest@5315b42e]" name="cancellDelete" duration-ms="1" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cancellDelete -->
+        <test-method status="SKIP" signature="checkCartContent()[pri:0, instance:tests.CartTest@5315b42e]" name="checkCartContent" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkCartContent -->
+        <test-method status="SKIP" signature="confirmDelete()[pri:0, instance:tests.CartTest@5315b42e]" name="confirmDelete" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confirmDelete -->
+        <test-method status="SKIP" signature="BrowserClose()[pri:0, instance:tests.CartTest@5315b42e]" name="BrowserClose" is-config="true" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserClose -->
+        <test-method status="SKIP" signature="BrowserClose()[pri:0, instance:tests.SearchFunctionTest@dfd3711]" name="BrowserClose" is-config="true" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserClose -->
+        <test-method status="SKIP" signature="BrowserClose()[pri:0, instance:tests.CheckoutTest@62043840]" name="BrowserClose" is-config="true" duration-ms="0" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserClose -->
+      </class> <!-- tests.CartTest -->
+      <class name="tests.CheckoutTest">
+        <test-method status="SKIP" signature="confirmCheckout()[pri:0, instance:tests.CheckoutTest@62043840]" name="confirmCheckout" duration-ms="1" started-at="2019-08-10T10:34:09Z" finished-at="2019-08-10T10:34:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confirmCheckout -->
+      </class> <!-- tests.CheckoutTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
