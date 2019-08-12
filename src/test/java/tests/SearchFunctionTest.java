@@ -38,13 +38,13 @@ public class SearchFunctionTest extends ReadPropertiesFile {
     driver.get(prop.getProperty("URL"));
   }
 
-  @Test(dataProvider = "dataProvider")
+  @Test(dataProvider = "provideDataExistentInfo")
   public void SearchTestExistentInfo(String existentInfo) throws InterruptedException {
     WebDriverWait wait = new WebDriverWait(driver, 15);
-    SearchPageObj hpo = new SearchPageObj(driver);
-    hpo.getsearchF().clear();
-    hpo.getsearchF().sendKeys(existentInfo);
-    hpo.getsearchB().click();
+    SearchPageObj searchpageîbj = new SearchPageObj(driver);
+    searchpageîbj.getsearchF().clear();
+    searchpageîbj.getsearchF().sendKeys(existentInfo);
+    searchpageîbj.getsearchB().click();
     wait.until(ExpectedConditions
         .visibilityOfElementLocated(By.linkText(prop.getProperty("SEARCH_TEST_PARAMETR"))));
     WebElement status = driver.findElement(By.linkText(prop.getProperty("SEARCH_TEST_PARAMETR")));
@@ -52,13 +52,13 @@ public class SearchFunctionTest extends ReadPropertiesFile {
 
   }
 
-  @Test(dataProvider = "dataProvider")
+  @Test(dataProvider = "NonexistentInfo")
   public void SearchTestNonexistentInfo(String nonexistentInfo) throws InterruptedException {
     WebDriverWait wait = new WebDriverWait(driver, 15);
-    SearchPageObj hpo = new SearchPageObj(driver);
-    hpo.getsearchF().clear();
-    hpo.getsearchF().sendKeys(nonexistentInfo);
-    hpo.getsearchB().click();
+    SearchPageObj searchpageîbj = new SearchPageObj(driver);
+    searchpageîbj.getsearchF().clear();
+    searchpageîbj.getsearchF().sendKeys(nonexistentInfo);
+    searchpageîbj.getsearchB().click();
     wait.until(
         ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".search-result-empty")));
     Assert.assertTrue(driver.findElement(By.cssSelector(".search-result-empty")).isDisplayed());
@@ -71,16 +71,19 @@ public class SearchFunctionTest extends ReadPropertiesFile {
     driver = null;
   }
 
-  @DataProvider(name = "dataProvider")
-  public Object[][] provideData(Method method) {
+  @DataProvider(name = "ExistentInfo")
+  public Object[][] provideDataExistentInfo() {
     Object[][] result = null;
-    if (method.getName().equals("SearchTestExistentInfo")) {
-      result = new Object[][] {{"GEO"}, {"georgia"}, {"Georgia"}};
-    } else if (method.getName().equals("SearchTestNonexistentInfo")) {
-      result = new Object[][] {{"Georgya"}, {"random info"}
-
+    result = new Object[][] {{"GEO"}, {"georgia"}, {"Georgia"}
       };
-    }
+    return result;
+  }
+
+  @DataProvider(name = "NonexistentInfo")
+  public Object[][] provideNonexistentInfo() {
+    Object[][] result = null;
+    result = new Object[][] {{"Georgya"}, {"random info"}
+    };
     return result;
   }
 }

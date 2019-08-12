@@ -16,35 +16,35 @@ public class CheckoutTest extends ReadPropertiesFile {
   public void CreateOrder() throws InterruptedException, IOException {
     driver = IntialDriver();
     driver.manage().window().maximize();
-    CartPageObj cpo = new CartPageObj(driver);
+    CartPageObj checkoutpageîbj = new CartPageObj(driver);
     driver.get(prop.getProperty("URL"));
-    cpo.getlink().click();
-    cpo.getAddP2().click();
-    cpo.getAddP7().click();
+    checkoutpageîbj.getlink().click();
+    checkoutpageîbj.getAddP2().click();
+    checkoutpageîbj.getAddP7().click();
     driver.get(prop.getProperty("CART_URL"));
-    cpo.getOrderButton().click();
+    checkoutpageîbj.getOrderButton().click();
 
   }
 
   @Test
   public void confirmCheckout() {
-    CheckoutPageObj chk = new CheckoutPageObj(driver);
+    CheckoutPageObj checkoutpageîbj = new CheckoutPageObj(driver);
     driver.get(prop.getProperty("CHECKOUT_URL"));
-    Assert.assertEquals(3, chk.getValidFields().size());
-    Assert.assertTrue(chk.getValidMobField().isDisplayed());
-    chk.getSubmitButton().click();
-    Assert.assertTrue(chk.getAllertBox().isDisplayed());
-    chk.getABoxButtonOK().click();
+    Assert.assertEquals(3, checkoutpageîbj.getValidFields().size());
+    Assert.assertTrue(checkoutpageîbj.getValidMobField().isDisplayed());
+    checkoutpageîbj.getSubmitButton().click();
+    Assert.assertTrue(checkoutpageîbj.getAllertBox().isDisplayed());
+    checkoutpageîbj.getABoxButtonOK().click();
   }
 
   @Test
   public void checkValidField() {
-    CheckoutPageObj chk = new CheckoutPageObj(driver);
+    CheckoutPageObj checkoutpageîbj = new CheckoutPageObj(driver);
     driver.get(prop.getProperty("CHECKOUT_URL"));
-    chk.getSubmitButton().click();
-    chk.getABoxButtonOK().click();
-    Assert.assertEquals(3, chk.getErrorFields().size());
-    Assert.assertTrue(chk.getErrorMobField().isDisplayed());
+    checkoutpageîbj.getSubmitButton().click();
+    checkoutpageîbj.getABoxButtonOK().click();
+    Assert.assertEquals(3, checkoutpageîbj.getErrorFields().size());
+    Assert.assertTrue(checkoutpageîbj.getErrorMobField().isDisplayed());
 
   }
 

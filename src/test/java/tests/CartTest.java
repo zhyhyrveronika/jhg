@@ -21,31 +21,31 @@ public class CartTest extends ReadPropertiesFile {
   public void AddProduct() throws InterruptedException, IOException {
     driver = IntialDriver();
     driver.manage().window().maximize();
-    CartPageObj cpo = new CartPageObj(driver);
+    CartPageObj cartpageîbj = new CartPageObj(driver);
     driver.get(prop.getProperty("URL"));
-    cpo.getlink().click();
-    cpo.getAddP2().click();
-    cpo.getAddP7().click();
+    cartpageîbj.getlink().click();
+    cartpageîbj.getAddP2().click();
+    cartpageîbj.getAddP7().click();
   }
 
 
   @Test
   public void checkCartContent() {
-    CartPageObj cpo = new CartPageObj(driver);
+    CartPageObj cartpageîbj = new CartPageObj(driver);
     driver.get(prop.getProperty("CART_URL"));
-    Assert.assertFalse(cpo.getEmptyCartM().isDisplayed());
+    Assert.assertFalse(cartpageîbj.getEmptyCartM().isDisplayed());
 
   }
 
   @Test
   public void cancellDelete() throws InterruptedException {
-    CartPageObj cpo = new CartPageObj(driver);
+    CartPageObj cartpageîbj = new CartPageObj(driver);
     WebDriverWait wait = new WebDriverWait(driver, 15);
     driver.get(prop.getProperty("CART_URL"));
-    wait.until(ExpectedConditions.elementToBeClickable(cpo.getClearCartButton()));
-    cpo.getClearCartButton().click();
-    cpo.getCloseClearButton().click();
-    Assert.assertFalse(cpo.getEmptyCartM().isDisplayed());
+    wait.until(ExpectedConditions.elementToBeClickable(cartpageîbj.getClearCartButton()));
+    cartpageîbj.getClearCartButton().click();
+    cartpageîbj.getCloseClearButton().click();
+    Assert.assertFalse(cartpageîbj.getEmptyCartM().isDisplayed());
     Thread.sleep(1000);
   }
 
@@ -53,12 +53,12 @@ public class CartTest extends ReadPropertiesFile {
   @Test
   public void confirmDelete() throws InterruptedException {
     WebDriverWait wait = new WebDriverWait(driver, 15);
-    CartPageObj cpo = new CartPageObj(driver);
+    CartPageObj cartpageîbj = new CartPageObj(driver);
     driver.get(prop.getProperty("CART_URL"));
-    wait.until(ExpectedConditions.elementToBeClickable(cpo.getClearCartButton()));
-    cpo.getClearCartButton().click();
-    cpo.getConfirmClearButton().click();
-    Assert.assertTrue(cpo.getEmptyCartM().isDisplayed());
+    wait.until(ExpectedConditions.elementToBeClickable(cartpageîbj.getClearCartButton()));
+    cartpageîbj.getClearCartButton().click();
+    cartpageîbj.getConfirmClearButton().click();
+    Assert.assertTrue(cartpageîbj.getEmptyCartM().isDisplayed());
   }
 
   @AfterTest
